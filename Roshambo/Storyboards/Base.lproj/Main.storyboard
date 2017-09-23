@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Choose Player View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ChoosePlayerViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Pqu-Xj-MvA">
+                                <rect key="frame" x="87.5" y="243.5" width="200" height="180"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="621-L5-cUd">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-UW-wxI">
+                                                <rect key="frame" x="62.5" y="0.0" width="75" height="65"/>
+                                                <state key="normal" image="paperIcon"/>
+                                                <connections>
+                                                    <action selector="paperButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OE6-dH-wOU"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="vKU-5M-nmn">
+                                        <rect key="frame" x="0.0" y="115" width="200" height="65"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9Y-fc-tzr">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="65"/>
+                                                <state key="normal" image="rockIcon"/>
+                                                <connections>
+                                                    <action selector="rockButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mhm-nj-zac"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKY-qa-CA5">
+                                                <rect key="frame" x="125" y="0.0" width="75" height="65"/>
+                                                <state key="normal" image="scissorsIcon"/>
+                                                <connections>
+                                                    <segue destination="NDy-2l-GAH" kind="show" id="Bi9-BB-Tuw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w7l-sW-EmL">
+                                <rect key="frame" x="149" y="523.5" width="77.5" height="22"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdE-Pn-VsD">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="m1u-ch-NbX"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w7l-sW-EmL" firstAttribute="top" secondItem="Pqu-Xj-MvA" secondAttribute="bottom" priority="750" constant="100" id="5AL-yX-ya1"/>
+                            <constraint firstItem="Pqu-Xj-MvA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Tyo-8e-qwu"/>
+                            <constraint firstItem="w7l-sW-EmL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZhR-04-zsh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="w7l-sW-EmL" secondAttribute="bottom" constant="30" id="jG3-Eu-UC4"/>
+                            <constraint firstItem="Pqu-Xj-MvA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="od9-gA-j1N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <segue destination="NDy-2l-GAH" kind="show" identifier="resultViewControllerSegue" id="6Q3-t9-lq4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="42"/>
+        </scene>
+        <!--Battle Result View Controller-->
+        <scene sceneID="eUV-u4-yWm">
+            <objects>
+                <viewController storyboardIdentifier="BattleResultViewController" id="NDy-2l-GAH" customClass="BattleResultViewController" customModule="Roshambo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mrR-Si-nbf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="oy5-WK-Fxb">
+                                <rect key="frame" x="57.5" y="236.5" width="260" height="240.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="z7P-Zo-QfR">
+                                        <rect key="frame" x="10" y="0.0" width="240" height="135"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x4b-8G-9OH">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="135"/>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="fLY-g1-h3M"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Paper covers rock! You win!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xln-ZP-9q0">
+                                        <rect key="frame" x="0.0" y="205" width="260" height="35.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="260" id="niX-dt-UJ2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240.5" id="BSr-J9-EVA"/>
+                                    <constraint firstAttribute="width" constant="260" id="nSX-W4-BBJ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pAN-BK-fxU">
+                                <rect key="frame" x="152" y="617" width="71" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVH-sm-XPM">
+                                        <rect key="frame" x="0.0" y="0.0" width="71" height="40"/>
+                                        <state key="normal" title="Play Again"/>
+                                        <connections>
+                                            <action selector="playAgainPressed:" destination="NDy-2l-GAH" eventType="touchUpInside" id="JbS-qX-bwh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="P04-qH-CIi"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pAN-BK-fxU" firstAttribute="top" secondItem="oy5-WK-Fxb" secondAttribute="bottom" priority="750" constant="140" id="1hB-VS-1eW"/>
+                            <constraint firstItem="oy5-WK-Fxb" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aSo-4y-nHo" secondAttribute="top" constant="30" id="5MF-Ra-Md1"/>
+                            <constraint firstItem="pAN-BK-fxU" firstAttribute="centerX" secondItem="mrR-Si-nbf" secondAttribute="centerX" id="Q1Q-g3-yAE"/>
+                            <constraint firstItem="aSo-4y-nHo" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="pAN-BK-fxU" secondAttribute="bottom" constant="100" id="Yr7-jg-U62"/>
+                            <constraint firstItem="oy5-WK-Fxb" firstAttribute="centerX" secondItem="mrR-Si-nbf" secondAttribute="centerX" id="i89-6S-pjF"/>
+                            <constraint firstItem="pAN-BK-fxU" firstAttribute="top" relation="lessThanOrEqual" secondItem="oy5-WK-Fxb" secondAttribute="bottom" constant="140" id="u5U-Bg-rIb"/>
+                            <constraint firstItem="aSo-4y-nHo" firstAttribute="bottom" secondItem="pAN-BK-fxU" secondAttribute="bottom" constant="10" id="ugh-fM-Wvz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aSo-4y-nHo"/>
+                    </view>
+                    <connections>
+                        <outlet property="winnerImage" destination="x4b-8G-9OH" id="b4U-7b-Ls3"/>
+                        <outlet property="winnerLabel" destination="xln-ZP-9q0" id="aAz-9a-LpB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzj-K5-OFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="42"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperIcon" width="75" height="65"/>
+        <image name="rockIcon" width="75" height="65"/>
+        <image name="scissorsIcon" width="75" height="65"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="6Q3-t9-lq4"/>
+    </inferredMetricsTieBreakers>
+</document>
