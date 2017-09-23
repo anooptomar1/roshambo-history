@@ -16,6 +16,8 @@ enum PlayerType: String {
 
 struct Roshambo {
     
+    static var battles: [PlayerType] = []
+    
     private static func defineWinner(with playerA: PlayerType, playerB: PlayerType) -> PlayerType {
         switch (playerA, playerB) {
         case (.rock, .paper), (.paper, .rock):
@@ -46,6 +48,7 @@ struct Roshambo {
         }
         
         let winner = defineWinner(with: playerA, playerB: playerB)
+        battles.append(winner)
         return ("\(winner.rawValue) wins \(winner == playerA ? playerB.rawValue : playerA.rawValue), you're \(playerB.rawValue)", winner.rawValue)
     }
     

@@ -9,6 +9,8 @@
 import UIKit
 
 class ChoosePlayerViewController: UIViewController {
+    
+    var battles: [PlayerType] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,9 @@ class ChoosePlayerViewController: UIViewController {
     // MARK: - Segue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "resultViewControllerSegue" {
+        if let historyVC = segue.destination as? HistoryViewController {
+            historyVC.battlesHistory = Roshambo.battles
+        } else if segue.identifier == "resultViewControllerSegue" {
             if let resultVC = segue.destination as? BattleResultViewController {
                 _ = configureNextVC(with: .paper, viewController: resultVC)
             }
